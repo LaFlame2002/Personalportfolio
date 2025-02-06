@@ -1,0 +1,221 @@
+
+
+
+.projects {
+  height: 160vh;
+  position: relative;
+  background-color: #151515;
+
+  .circleContainer{
+    position: relative;
+    margin-top: 75px;
+    
+    .circle{
+        height: 1550%;
+        width: 120%;
+        left: -10%;
+        border-radius: 0 0 50% 50%;
+        background-color: #151515;
+        z-index: 1;
+        position: absolute;
+        box-shadow: 0px 60px 50px rgba(0, 0, 0, 0.748);
+
+    }
+
+}
+
+
+  .description {
+    padding-top: 120px;
+    color: #86868b;
+    font-weight: bold;
+    font-size: 60px;
+    padding-left: 330px;
+
+    .body {
+      display: flex;
+      gap: 50px;
+      align-items: baseline;
+
+      p {
+        margin: 0px;
+
+        &:nth-of-type(1) {
+          display: flex;
+          font-size: 50px;
+          span {
+            margin-right: 3px;
+          }
+          .mask {
+            position: relative;
+            overflow: hidden;
+            display: inline-flex;
+          }
+        }
+
+        &:nth-of-type(2) {
+          display: flex;
+          padding-left: 550px;
+          font-size: 18px;
+          align-items: center;
+          font-weight: 500;
+          margin: 0px;
+        }
+      }
+    }
+
+    .moreWork {
+      padding: 40px;
+      border-radius: 60px;
+      border: 0px solid grey;
+    }
+  }
+
+  .embla {
+    width: 1250px;
+    max-width: 100vw;
+    height: 700px;
+    margin: auto;
+
+    .embla__container {
+      display:flex;
+
+      .embla__slide {
+        flex: 0 0 100%;
+        top: 25px;
+        left: 0px;
+        width: 1165px;
+        height: 680px;
+        right: 330px;
+        justify-content: center;
+        align-items: center;
+        border-radius: 1.5rem;
+        position: relative;
+        background-color: black;
+        margin-right: 90px;
+        overflow: hidden;
+
+        video {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          border-radius: 1.5rem;
+          position: relative;
+        }
+
+        .text {
+          top: 0%;
+          position: absolute;
+          height: 100px;
+          font-size: 26px;
+          padding-top: 40px;
+          line-height: 1.1666666667;
+          font-weight: 700;
+          letter-spacing: .009em;
+          left: 3.7%;
+          color: white;
+          z-index: 10;
+          font: medium;
+         
+        }
+      }
+    }
+  
+  .slide_controls {
+    position: flex; 
+    z-index: 10;
+}
+
+.slide_control_button {
+   
+    justify-content: center; 
+    align-items: center; 
+    color: white;
+    width: 3.0rem;
+    height: 3.0rem;
+    left: 19%;
+    top: 62.5%;
+    border-radius: 32px;
+    position: absolute;
+    background-color: #424245b3;
+}
+.slide_control_button:hover {
+  background-color: #2e2d2d; 
+}
+.slide_control_button1:hover {
+  background-color: #2e2d2d; 
+}
+.slide_control_button1 {
+   
+  justify-content: center; 
+  align-items: center; 
+  color: white;
+  width: 3.0rem;
+  height: 3.0rem;
+  left: 22%;
+  top: 62.5%;
+  border-radius: 32px;
+  position: absolute;
+  background-color: #424245b3;
+}
+
+.next {
+
+  font-size: 1.8rem;
+    left: 22%;
+    top: 90%;
+}
+
+.prev {
+  font-size: 1.8rem;
+    left: 19%;
+    top: 90%;
+}
+
+  .button {
+    top: 65px;
+    left: 46%;
+    width: 160px;
+    height: 50px;
+    border-radius: 32px;
+    background-color: #424245b3;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .dots {
+      position: absolute;
+      bottom: 13.5px;
+      color: white;
+      left: 0;
+      width: 100%;
+      height: 50%;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      li {
+        list-style: none;
+        width: 8px;
+        height: 8px;
+        background-color: white;
+        margin: 5px;
+        border-radius: 10px;
+        justify-content: center;
+        margin-right: 5px;
+        cursor: pointer;
+
+        &:hover {
+          width: 45px;
+        }
+
+        &.active {
+          background-color: white;
+        }
+      }
+    }
+  }
+}}

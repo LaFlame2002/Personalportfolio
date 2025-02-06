@@ -1,0 +1,118 @@
+.aboutcontainer {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #151515;
+  position: relative;
+  height: 110vh; 
+
+  .body {
+    height: 160vh; // Mantém a altura original
+    padding-top: 250px;
+    width: 100%;
+    max-width: 1800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; // Centraliza horizontalmente os itens filhos
+
+    .sobre {
+      color: #ffffff;
+      position: absolute;
+      top: 20vh;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: min(6vw, 4.5rem);
+      line-height: 1.0625;
+      font-weight: 600;
+      letter-spacing: -0.009em;
+      text-align: center;
+      font-variation-settings: "wght" 750, "wdth" 98;
+    }
+
+    .texto {
+      color: white;
+      position: absolute;
+      top: 35vh;
+      
+      left: 62.5%;
+      transform: translateX(-50%);
+      font-size: inherit;
+      line-height: 1.0625;
+      font-family: inherit;
+      line-height: inherit;
+      font-weight: inherit;
+      letter-spacing: -0.009em;
+      max-width: 60%; // Ajusta conforme necessário para manter o texto centralizado e com bom espaçamento
+      width: 100%;
+      box-sizing: border-box;
+
+      .underline {
+        border-bottom: 1px solid rgb(134, 134, 134);
+      }
+    }
+
+    .box {
+      margin-top: 2.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      .name,
+      .email,
+      .textbox,
+      .submit {
+        color: black;
+      }
+      .name{
+        position: relative;
+        top: 17vh;
+        height: 3.5rem;
+        border-radius: 1rem;
+        border: 2px solid white;
+        width: 300%;
+        max-width: 600px;
+      }
+      .email {
+        position: relative;
+        top: 23vh;
+        height: 3.5rem;
+        border-radius: 1rem;
+        border: 2px solid white;
+        width: 300%;
+        max-width: 600px;
+      }
+
+      .textbox {
+        border-radius: 1rem;
+        height: 13rem;
+        margin-top: 27vh;
+        margin-bottom: 0.75rem;
+        padding: 1rem;
+        width: 300%;
+        max-width: 600px;
+      }
+
+      .submit {
+        width: 180px;
+        height: 180px;
+        background-color: white;
+        color: black;
+        border-radius: 50%;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        p{
+            color: black;
+            margin: 0px;
+            font-size: 16px;
+            font-weight: 300;
+            z-index: 2;
+            position: relative;
+        }}
+    }
+  }
+}

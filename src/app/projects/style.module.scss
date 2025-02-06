@@ -1,0 +1,176 @@
+.global {
+  box-sizing: border-box;
+  width: 100vw;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  background: #151515;
+  font-family: 'Roboto', sans-serif;
+  color: #f0f0f0;
+  text-transform: uppercase;
+
+  .previewimg {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    aspect-ratio: 3 / 2;
+    z-index: 1;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    transition: transform 0.5s ease-out;
+  }
+
+  .previewDescription {
+    position: absolute; 
+    bottom: 0; /* Posicione no fundo da imagem */
+    left: 0; /* Alinhe à esquerda */
+    width: 100%; /* Alinhe a caixa com a largura da imagem */
+    color: #fff;
+    font-size: 16px; /* Tamanho da fonte inalterado */
+    text-align: center;
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 5px;
+    border-radius: 0; /* Remova o arredondamento dos cantos, se necessário */
+    font-weight: 600;
+  }
+
+  .container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    perspective: 1500px;
+
+    .gallery {
+      position: absolute;
+      top: 20.5%;
+      left: 50%;
+      transform-style: preserve-3d;
+      transform: translateX(-50%) rotateX(55deg);
+      width: 100%;
+      height: auto;
+
+      .item {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 45px;
+        height: 60px;
+        margin: 10px;
+        transform-style: preserve-3d;
+        background: #b0b0b0;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+
+        a {
+          display: block;
+          width: 100%;
+          height: 100%;
+        }
+
+        .description {
+          position: absolute;
+          top: 80%; // Ajuste conforme necessário
+          left: 50%;
+          transform: translateX(-50%);
+          color: #fff;
+          font-size: 9px; // Ajuste conforme necessário
+          text-align: center;
+          white-space: nowrap;
+          z-index: 2;
+          background: rgba(0, 0, 0, 0.7);
+          padding: 2px 5px;
+          border-radius: 4px;
+        }
+      }
+    }
+  }
+
+  .fullscreenOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 3;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    
+    &.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .fullscreenImage {
+      max-width: 90%;
+      max-height: 90%;
+      object-fit: contain;
+    }
+  }
+
+  .projects {
+    position: absolute;
+    top: 95vh;
+    width: 100%;
+    z-index: 2;
+    text-transform: uppercase;
+    letter-spacing: -0.009em;
+    text-align: center;
+    font-variation-settings: "wght" 750, "wdth" 98;
+  }
+  
+  @media (max-width: 1360px) {
+    .previewimg {
+      max-width: 280px;
+
+      &:hover {
+        transform: translate(-50%, -50%) scale(1.1);
+      }
+    }
+
+    .container .gallery .item {
+      width: 40px;
+      height: 55px;
+      margin: 8px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .previewimg {
+      max-width: 200px;
+
+      &:hover {
+        transform: translate(-50%, -50%) scale(1.1);
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    .previewimg {
+      max-width: 150px;
+
+      &:hover {
+        transform: translate(-50%, -50%) scale(1.05);
+      }
+    }
+  }
+}
