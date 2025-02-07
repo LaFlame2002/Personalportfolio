@@ -4,6 +4,8 @@ import styles from './style.module.scss';
 import { motion } from 'framer-motion';
 import { links, footerLinks } from './data';
 import { perspective, slideIn } from './anim';
+import React from "react";
+
 
 export default function Navbar() {
   const handleClick = (title) => {

@@ -4,7 +4,10 @@ import { useInView, motion } from 'framer-motion';
 import { useRef } from 'react';
 import { slideUp, opacity } from './animation';
 import Rounded from '../../common/RoundedButton';
+import React from "react";
+
 export default function index() {
+
 
     const phrase = "Exploring the boundaries of knowledge, always seeking new challenges. Committed to excellence and continuous personal and professional growth. ";
     const description = useRef(null);

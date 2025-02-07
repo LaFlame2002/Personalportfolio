@@ -1,5 +1,7 @@
 import { motion } from 'framer-motion';
 import styles from './style.module.scss';
+import React from "react";
+
 
 export default function Button({isActive, toggleMenu}) {
   return (

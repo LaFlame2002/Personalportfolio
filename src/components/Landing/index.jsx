@@ -7,6 +7,8 @@ import { ScrollTrigger } from 'gsap/all';
 import { slideUp } from './animation';
 import { motion } from 'framer-motion';
 import { Unbounded } from "next/font/google";
+import React from "react";
+
 
 const unbounded = Unbounded({ subsets: ["latin"] });
 
@@ -33,7 +35,7 @@ export default function Home() {
     // requestAnimationFrame(animate);
   }, [])
 
-   const animate = () => {
+   /*const animate = () => {
 //     if(xPercent < -100){
 //       xPercent = 0;
 //     }
@@ -44,7 +46,7 @@ export default function Home() {
 //     gsap.set(secondText.current, {xPercent: xPercent})
 //     requestAnimationFrame(animate);
       xPercent += 0.1 * direction;
-  }
+  }*/
 
   return (
     <motion.main  variants={slideUp} initial="initial" animate="enter" className={styles.landing}>

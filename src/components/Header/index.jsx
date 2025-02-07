@@ -1,5 +1,5 @@
 'use client';
-import { useState, useRef, useLayoutEffect, useEffect } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import Button from './Button';
 import styles from './style.module.scss';
@@ -9,6 +9,8 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { usePathname } from 'next/navigation';
 import { slideUp } from './animation';
 import Link from 'next/link';
+import React from "react";
+
 
 const menuVariants = {
   open: {

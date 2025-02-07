@@ -2,9 +2,10 @@
 import React, { useRef, useEffect, useState } from "react";
 import { slideUp, opacity } from './animation';
 import styles from './style.module.scss';
-import { useInView, motion, useTransform, useScroll } from 'framer-motion';
+import {motion, useTransform, useScroll } from 'framer-motion';
 import useEmblaCarousel from 'embla-carousel-react';
 import dynamic from 'next/dynamic';
+
 
 
 // Carregar dinamicamente o componente Video apenas no cliente
